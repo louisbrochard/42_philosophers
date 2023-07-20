@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louisbrochard <louisbrochard@student.42    +#+  +:+       +#+        */
+/*   By: lbrochar <lbrochar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:24:29 by louisbrocha       #+#    #+#             */
-/*   Updated: 2023/07/20 10:24:30 by louisbrocha      ###   ########.fr       */
+/*   Updated: 2023/07/20 15:30:08 by lbrochar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	init_philo(t_phil *phil, t_fork **forks, t_params *params, int cur)
 {
 	phil->params = params;
-	phil->pos = cur;
+	phil->pos = cur + 1;
 	phil->last_meal = 0;
 	phil->meal_count = 0;
 	phil->r_fork = &((*forks)[cur]);
@@ -54,12 +54,6 @@ int	create_philos(t_phil **philos, t_fork **forks, t_params	*params)
 
 int	init_params(t_params *params, int argc, char **argv)
 {
-	if (argc < 5)
-	{
-		ft_printf("Usage : ./philo number_philos time_die ");
-		ft_printf("time_eat time_sleep [number_eat]\n");
-		return (0);
-	}
 	params->num = ft_atoi(argv[1]);
 	params->time_to_die = ft_atoi(argv[2]);
 	params->time_to_eat = ft_atoi(argv[3]);

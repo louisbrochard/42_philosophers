@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louisbrochard <louisbrochard@student.42    +#+  +:+       +#+        */
+/*   By: lbrochar <lbrochar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:27:58 by louisbrocha       #+#    #+#             */
-/*   Updated: 2023/07/20 10:27:59 by louisbrocha      ###   ########.fr       */
+/*   Updated: 2023/07/20 15:26:14 by lbrochar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	init_philo(t_phil *phil, t_params *params, int cur)
 	char	*sem_name;
 
 	phil->params = params;
-	phil->pos = cur;
+	phil->pos = cur + 1;
 	phil->last_meal = 0;
 	phil->meal_count = 0;
 	pos_str = ft_itoa(phil->pos);
