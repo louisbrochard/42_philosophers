@@ -21,18 +21,18 @@ int	free_all(t_phil *philos, t_params *params, int exit_code)
 	return (exit_code);
 }
 
-int check_nb(char *argv)
+int	check_nb(char *argv)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(argv[i])
-    {
-        if (!ft_isdigit(argv[i]))
-            return (0);
-        i++;
-    }
-    return (1);
+	i = 0;
+	while (argv[i])
+	{
+		if (!ft_isdigit(argv[i]))
+			return (0);
+		i++;
+	}
+	return (1);
 }
 
 int	check_arg(int argc, char **argv)
@@ -46,7 +46,7 @@ int	check_arg(int argc, char **argv)
 		ft_printf("time_eat time_sleep [number_eat]\n");
 		return (0);
 	}
-	while(i != argc)
+	while (i != argc)
 	{
 		if (!check_nb(argv[i]))
 		{
